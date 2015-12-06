@@ -16,3 +16,11 @@ Segmentation fault
 1. Set your aws access keys as environment variables
 1. Run `wal-e --s3-prefix=<s3_prefix> backup-list`
 
+The vagrant provisioner runs the following steps:
+```
+sudo yum upgrade --enablerepo=cr python -y
+sudo yum install --enablerepo=cr python-devel -y
+sudo rpm -iUvh http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
+sudo yum install python-pip -y
+sudo pip install wal-e
+```
